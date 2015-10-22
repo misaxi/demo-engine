@@ -1,9 +1,22 @@
-run the tests
+## project structure
 ```
-$ npm test
+discount.js # the discount engine
+rules\      # all the discount rules
+tests\      # all the tests
 ```
 
-run the tests with coverage report
-```
-$ npm run cover
-```
+## get up and running
+- install nodejs version 4
+- install dependencies, go to the project folder and run
+  ```
+  $ npm install
+  ```
+- run the tests
+  ```
+  $ npm test
+  ```
+- run the tests with coverage report
+  ```
+  $ npm run cover
+  ```
+- to view the coverage report, open `coverage/lcov-report/index.html`.
