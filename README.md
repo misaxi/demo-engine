@@ -5,6 +5,19 @@ rules\      # all the discount rules
 tests\      # all the tests
 ```
 
+before using the discount engine, `init` function needs to be called. it registers the rules sitting in the rules folder.
+
+```js
+discount.init((err) => {
+  if (err) return console.error('failed to load the engine...', err)
+  discount(user, items)
+})
+```
+
+there two types of rules, one is for lineitem, the other is for grand total.
+the lineitem rules are mutually exclusive.
+where the total rules can be aggregated.
+
 ## get up and running
 - install nodejs version 4
 - install dependencies, go to the project folder and run
