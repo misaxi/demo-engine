@@ -3,8 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "test": "NODE_ENV=test tap tests/**/*Test.js",
-    "cover": "NODE_ENV=test istanbul cover node_modules/argg tests/**/*Test.js"
+    "test": "NODE_ENV=test tap tests/*Test.js",
+    "cover": "NODE_ENV=test istanbul cover node_modules/argg tests/*Test.js"
   },
   "devDependencies": {
     "argg": "0.0.2",

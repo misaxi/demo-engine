@@ -1,5 +1,5 @@
 const test = require('tape')
-const handle = require('../../rules/fiveOver100')
+const handle = require('../rules/fiveOver100')
 
 test('total of $240 should have $10 discount', (t) => {
   t.plan(1)
