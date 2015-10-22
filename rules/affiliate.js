@@ -4,10 +4,13 @@ module.exports = Object.assign(handle, {
   target: 'lineitem'
 })
 
-function handle (user, item) {
+function handle (user, items) {
   if (user.type !== 'affiliate') return false
-  if (item.category === 'groceries') return false
 
-  item.price = item.price * 0.9
+  items.forEach(item => {
+    if (item.category === 'groceries') return
+    item.price = item.price * 0.9
+  })
+
   return true
 }
