@@ -48,11 +48,16 @@ function itemsDiscount (user, items) {
 // (obj, array) -> null
 function grandTotalDiscount (items) {
   const total = items.reduce((sum, item) => sum += item.price * item.qty, 0)
+  const discounts = []
 
   for (var i = 0; i < rules.total.length; i++) {
     var handle = rules.total[i]
     var discount = handle(total)
-    if (discount === 0) return
-    items.push({ name: handle.type, qty: 1, price: discount })
+    if (discount === 0) continue
+    discounts.push(discount)
   }
+
+  discounts.forEach(discount => {
+    items.push({ name: handle.type, qty: 1, price: discount })
+  })
 }
